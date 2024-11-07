@@ -12,16 +12,7 @@ export class AppComponent {
     new WishItem ('Eat', true),
     new WishItem ('Find a girlfriend')
   ];
-  title = 'wishList';
 
-  newWishText = ""
-
-  addNewWish() {
-    this.items.push(new WishItem(this.newWishText));
-    this.newWishText = "";
+  filter: (item: WishItem) => boolean = () => true;
   }
 
-  toggleItem(item : WishItem) {
-    item.isComplete = !item.isComplete;
-  };
-}

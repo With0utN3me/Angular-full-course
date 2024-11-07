@@ -1,0 +1,11 @@
+<div class="select-wrapper">
+    <select 
+        name="select" 
+        class="select-form"
+        [(ngModel)]="listFilter"
+        (ngModelChange)="updateFilter($event)">
+        <option value="0" class="select-item">All</option>
+        <option value="1" class="select-item">Unfulfilled</option>
+        <option value="2" class="select-item">Fulfilled</option>
+    </select>
+</div>
